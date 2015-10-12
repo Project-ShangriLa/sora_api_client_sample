@@ -4,16 +4,18 @@
  * Copyright (c) Rirei Kuroshima
  */
 
+$options = getopt("y:n:");
+
 /* Defines a named constant */
 define("BASEURL", "http://api.moemoe.tokyo/");
 define("SUBURL", "anime/v1/master/");
 
 /* URL of ShangriLa Anime API Server (Sora). */
 $url = BASEURL . SUBURL;
-if(array_key_exists(1, $argv)) {
-        $url .= $argv[1];
-        if(array_key_exists(2, $argv)) {
-                $url .= "/" . $argv[2];
+if(array_key_exists("y", $options)) {
+        $url .= $options["y"];
+        if(array_key_exists("n", $options)) {
+                $url .= "/" . $options["n"];
         }
 } else {
         $url .= "cours";
