@@ -3,8 +3,12 @@
  * Copyright (c) Rirei Kuroshima
  */
 
+/* Defines a named constant */
+define("BASEURL", "http://api.moemoe.tokyo/");
+define("SUBURL", "anime/v1/master/");
+
 /* URL of ShangriLa Anime API Server (Sora). */
-$url = "http://api.moemoe.tokyo/anime/v1/master/cours";
+$url = BASEURL . SUBURL . "cours";
 
 /* Decodes a JSON string. */
 $json = file_get_contents($url);
