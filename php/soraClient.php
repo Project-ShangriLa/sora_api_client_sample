@@ -1,3 +1,4 @@
+#!/usr/bin/php -q
 <?php
 /*
  * Copyright (c) Rirei Kuroshima
