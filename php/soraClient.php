@@ -37,14 +37,14 @@ define("SUBURL", "anime/v1/master/");
 /* URL of ShangriLa Anime API Server (Sora). */
 $url = BASEURL . SUBURL;
 if(array_key_exists("y", $options)) {
-        if(is_int($options["y"]) === false) {
+        if(is_numeric($options["y"]) === false) {
                 usage();
                 exit(1);
         }
         $url .= $options["y"];
 
         if(array_key_exists("n", $options)) {
-                if(is_int($options["n"]) === false) {
+                if(is_numeric($options["n"]) === false) {
                         usage();
                         exit(1);
                 }
