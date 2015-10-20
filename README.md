@@ -82,7 +82,7 @@ python
 #### Usage
 
 ```
-./client.py [-y year] [-n number] | jq .
+python3.4 client.py [-y year] [-n number] | jq .
 ```
 
 goと同様です.
@@ -93,7 +93,7 @@ goと同様です.
 
 #### Note
 
-環境：Python 2.7.6．
+環境：Python 3.4．
 
 ライブラリ:requestsが必要です．
 
