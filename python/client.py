@@ -34,7 +34,7 @@ if __name__ == '__main__':
             get =   year +"/" + number
 
     if argc == 1:
-        get = "list"
+        get = "cours"
 
     url = url + get
 
