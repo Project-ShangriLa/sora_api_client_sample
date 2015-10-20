@@ -61,11 +61,6 @@ $ git checkout c4318e2cc141544385c97f47d2dbe3f250494085
 
 なので, gcfg をインストールすることを推奨します.
 
-php
--------
-
-### soraClient.php
-
 #### Usage
 
 ```
@@ -91,3 +86,29 @@ php
 
 `t/`ディレクトリにテストスクリプトが入っていますが, テストケースが少なすぎる
 ので, テストケースを生成するジェネレータを作成する必要がある.
+
+
+
+python
+-------
+
+### client.py
+
+#### Usage
+
+```
+./client.py [-y year] [-n number] | jq .
+```
+
+goと同様です.
+
+#### Options
+
+goと同様です.
+
+#### Note
+
+環境：Python 2.7.6．
+
+ライブラリ:requestsが必要です．
+
