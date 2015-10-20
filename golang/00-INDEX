@@ -7,20 +7,8 @@ line.
 00-INDEX
         o this file.
 
-AUTHORS
-        o information for programmers and maintainers.
-
 CodingStyle
         o short document describing the preferred coding style.
-
-README
-        o short document describing sora_api_client_sample/golan/
-
-gcfg.md
-	o short document of Gcfg.
-
-soraClient.gcfg
-        o gcfg file for soraClient.go
 
 soraClient.go
 	o ShangriLa API client in Go.
