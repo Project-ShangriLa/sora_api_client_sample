@@ -82,7 +82,7 @@ python
 #### Usage
 
 ```
-python3.4 client.py [-y year] [-n number] | jq .
+$ python3.4 client.py [-y year] [-n number] | jq .
 ```
 
 goと同様です.
