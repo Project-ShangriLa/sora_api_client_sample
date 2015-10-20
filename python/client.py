@@ -3,11 +3,11 @@ import requests
 import sys
 
 def usage(flag):
-    print ".client.py -y [year] -n [number]"
+    print (".client.py -y [year] -n [number]")
     if flag == 1 :
-        print "renge of [year] is 2013 form 2015."
+        print ("renge of [year] is 2013 form 2015.")
     if flag == 2 :
-        print "renge of [number] is 1 form 4."
+        print ("renge of [number] is 1 form 4.")
     exit(1)
 
 
@@ -37,10 +37,11 @@ if __name__ == '__main__':
         get = "list"
 
     url = url + get
+
     r = requests.get(url)
-    print r.text.encode('utf_8')
+    print (r.text)
     exit(0)
 
-    #print r.status_code
+
     #print r.encoding
 
