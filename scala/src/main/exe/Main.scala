@@ -68,8 +68,8 @@ object Main extends App {
       tesagure.head.toSeq.sortBy(_._1).foreach { parameter =>
 
         // valueをString変換してもダブルクォートが付いたままなので、表示前に除去する
-        val value = parameter._2.toString().replaceAll("\"(.*)\"", "$1")
-        println(s"""  ${parameter._1}　: ${value}""")
+        val value = parameter._2.toString().replaceFirst("""^\"(.*)\"$""", "$1")
+        println(s"""  ${parameter._1} : ${value}""")
       }
     }
     case Failure(t) => {
