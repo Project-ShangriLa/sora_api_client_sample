@@ -10,19 +10,11 @@ import (
 	"flag"
 	"strconv"
 	"time"
-	"code.google.com/p/gcfg"
 )
 
-type Config struct {
-	Url struct {
-		Baseurl string
-		Suburl string
-	}
-}
-
 func main() {
-	var cfg Config
-	gcfg.ReadFileInto(&cfg, "soraClient.gcfg")
+	const baseurl = "http://api.moemoe.tokyo/"
+	const suburl = "anime/v1/master/"
 
 	var year int
 	var url string
@@ -43,14 +35,13 @@ func main() {
 				return
 			}
 
-			url = cfg.Url.Baseurl + cfg.Url.Suburl +
+			url = baseurl + suburl +
 				strconv.Itoa(*y) + "/" + strconv.Itoa(*n)
 		} else {
-			url = cfg.Url.Baseurl + cfg.Url.Suburl +
-				strconv.Itoa(*y)
+			url = baseurl + suburl + strconv.Itoa(*y)
 		}
 	} else {
-		url = cfg.Url.Baseurl + cfg.Url.Suburl + "cours"
+		url = baseurl + suburl + "cours"
 	}
 
 	response, _ := http.Get(url)
