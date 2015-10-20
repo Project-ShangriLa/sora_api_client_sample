@@ -41,26 +41,6 @@ golang
 $ go build soraClient.go
 ```
 
-#### Note
-
-URL の読込みに gcfg を使用します. 以下, gcfg のインストール方法です.
-
-```
-$ go get code.google.com/p/gcfg
-```
-
-gcfg をインストールしたくない場合は,
-`c4318e2cc141544385c97f47d2dbe3f250494085`をチェックアウトしてください.
-
-```
-$ git checkout c4318e2cc141544385c97f47d2dbe3f250494085
-```
-
-ただし, 上記コマンドを実行すると, PHP と python のプログラムがない状態になりま
-す.
-
-なので, gcfg をインストールすることを推奨します.
-
 php
 ------
 
