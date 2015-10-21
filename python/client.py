@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     url = url + get
     print url
-    #r = requests.get(url)
-    #print (r.text)
+    r = requests.get(url)
+    print (r.text)
     exit(0)
 

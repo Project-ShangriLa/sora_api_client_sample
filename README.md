@@ -93,7 +93,7 @@ goと同様です.
 
 #### Note
 
-環境：Python 3.4．
+環境：Python3.4．
 
-ライブラリ:requestsが必要です．
+ライブラリ:requests、argparseが必要です．
 
