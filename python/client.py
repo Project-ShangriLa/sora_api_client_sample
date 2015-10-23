@@ -9,7 +9,7 @@ if __name__ == '__main__':
     argc = len(param)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('-y',type=int,choices=range(2013,2016),default=0)
+    parser.add_argument('-y',type=int,choices=range(2014,2016),default=0)
     parser.add_argument('-n',type=int,choices=range(1,5),default=0)
     args=parser.parse_args()
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
             get = get + "/" +str(args.n)
 
     url = url + get
-    print url
+    #print (url)
     r = requests.get(url)
     print (r.text)
     exit(0)
