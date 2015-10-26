@@ -15,6 +15,7 @@ import (
 func main() {
 	const baseurl = "http://api.moemoe.tokyo/"
 	const suburl = "anime/v1/master/"
+	const minYear = 2014
 
 	var year int
 	var url string
@@ -25,7 +26,7 @@ func main() {
 	url = baseurl + suburl
 	if *y != 999 {
 		year, _ = strconv.Atoi(time.Now().Format("2006"))
-		if *y > year {
+		if *y < minYear || year < *y {
 			fmt.Println("年を正しく入力してください")
 			return
 		}
