@@ -77,7 +77,7 @@ php
 python
 -------
 
-### client.py
+### soraClient.py
 #### Requirements
  - Python3.x
  - Python libraries installed with pip
@@ -87,7 +87,7 @@ python
 #### Usage
 
 ```
-$ python3.4 client.py [-y year] [-n number] | jq .
+$ python3.4 soraClient.py [-y year] [-n number] | jq .
 ```
 
 goと同様です.
