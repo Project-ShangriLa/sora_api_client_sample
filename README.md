@@ -78,6 +78,11 @@ python
 -------
 
 ### client.py
+#### Requirements
+ - Python3.x
+ - Python libraries installed with pip
+   - requests
+   - argparse
 
 #### Usage
 
@@ -91,9 +96,4 @@ goと同様です.
 
 goと同様です.
 
-#### Note
-
-環境：Python3.4．
-
-ライブラリ:requests、argparseが必要です．
 
