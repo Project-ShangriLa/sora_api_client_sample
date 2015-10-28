@@ -84,6 +84,10 @@ python
    - requests
    - argparse
 
+```
+$pip3 install requests  
+$pip3 install argparse
+```
 #### Usage
 
 ```
