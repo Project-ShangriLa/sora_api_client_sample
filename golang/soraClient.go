@@ -10,6 +10,7 @@ import (
 	"flag"
 	"strconv"
 	"time"
+	"log"
 )
 
 func main() {
@@ -43,10 +44,16 @@ func main() {
 		url = baseurl + suburl + "cours"
 	}
 
-	response, _ := http.Get(url)
+	response, err := http.Get(url)
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer response.Body.Close()
 
-	body, _ := ioutil.ReadAll(response.Body)
+	body, err := ioutil.ReadAll(response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
 	result := string(body)
 
 	fmt.Println(result)
