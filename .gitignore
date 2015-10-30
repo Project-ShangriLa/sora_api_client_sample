@@ -8,4 +8,6 @@
 # executable file
 # ---------------
 soraClient
-soraClient.exe  # If you compile in Cygwin
+
+# If you compile in Cygwin
+soraClient.exe
