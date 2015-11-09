@@ -20,25 +20,27 @@ func main() {
 
 	var year int
 	var url string
-	var y = flag.Int("y", 999, "指定された年のアニメの情報を取得する")
-	var n = flag.Int("n", 999, "アニメのクール")
+	var y, n int
+
+	flag.IntVar(&y, "y", 999, "指定された年のアニメの情報を取得する")
+	flag.IntVar(&n, "n", 999, "アニメのクール")
 	flag.Parse()
 
 	url = baseurl + suburl
-	if *y != 999 {
+	if y != 999 {
 		year, _ = strconv.Atoi(time.Now().Format("2006"))
-		if *y < minYear || year < *y {
+		if y < minYear || year < y {
 			fmt.Println("年を正しく入力してください")
 			return
 		}
-		url += strconv.Itoa(*y)
+		url += strconv.Itoa(y)
 
-		if *n != 999 {
-			if *n < 1 || 5 < *n {
+		if n != 999 {
+			if n < 1 || 5 < n {
 				fmt.Println("クールを正しく入力してください")
 				return
 			}
-			url += "/" + strconv.Itoa(*n)
+			url += "/" + strconv.Itoa(n)
 		}
 	} else {
 		url = baseurl + suburl + "cours"
