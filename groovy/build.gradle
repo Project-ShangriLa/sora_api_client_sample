@@ -11,11 +11,6 @@ eclipse.project.name = 'sora_api_client_groovy_sample'
 
 repositories {
 	mavenCentral()
-	maven {
-		// for HTTP Builder
-		url "http://repository.codehaus.org"
-		url "http://snapshots.repository.codehaus.org"
-	}
 }
 
 dependencies {
