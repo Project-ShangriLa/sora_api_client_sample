@@ -3,11 +3,18 @@ sora_api_client_sample - a script for sora-playframework-scala
 
 ShangriLa Anime API Server Sora (穹) を叩くサンプルプログラムです.
 
-サンプルプログラムは, golang, PHP, python, Scala の言語で実装されています. プログラム
-の詳細は各ディレクトリを見てください.
+サンプルプログラムは, 以下の言語実装があります.
+
+- golang
+- PHP
+- python
+- Scala
+- Groovy
+
+プログラムの詳細は各ディレクトリを参照ください.
 
 `golang/`と`php/`の中にあるプログラムは, オプションをチェックする機能が
-まだまだなので, 正しくオプションをつけた時のみしか動作を保証していません.
+未実装のため, 正しくオプションをつけた時のみしか動作を保証していません.
 
 golang
 -------
