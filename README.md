@@ -10,6 +10,7 @@ ShangriLa Anime API Server Sora (穹) を叩くサンプルプログラムです
 - python
 - Scala
 - Groovy
+- Kotlin
 
 プログラムの詳細は各ディレクトリを参照ください.
 
@@ -106,5 +107,3 @@ goと同様です.
 #### Options
 
 goと同様です.
-
-
