@@ -1,7 +1,7 @@
 package shangrila
 
 import com.google.gson.FieldNamingPolicy
-import com.google.gson.GsonBuilder
+import com.google.gson.Gson
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -33,13 +33,9 @@ interface SoraClient {
 }
 
 fun main(args: Array<String>) {
-    val gson = GsonBuilder()
-            .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-            .create()
-
     val retrofit = Retrofit.Builder()
             .baseUrl("http://api.moemoe.tokyo/")
-            .addConverterFactory(GsonConverterFactory.create(gson))
+            .addConverterFactory(GsonConverterFactory.create(Gson()))
             .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
             .build()
 
@@ -48,7 +44,7 @@ fun main(args: Array<String>) {
     soraClient.Call("2016", "4")
             .subscribe({
                 it.forEach {
-                    println("${it.title}")
+                    println("${it.title} ${it.public_url}")
                 }
             })
 }
