@@ -1,4 +1,4 @@
-# sora_api_client_groovy_sample
+# sora_api_client_kotlin_sample
 
 Sora APIの Kotlinサンプルコードです。
 また、Javaのライブラリもいくつか利用しています。
