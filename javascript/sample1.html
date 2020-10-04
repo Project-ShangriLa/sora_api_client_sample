@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+      $.ajax({
+        type: 'GET',
+        url: 'https://api.moemoe.tokyo/anime/v1/master/2020/4?ogp=1',
+        dataType: 'json',
+        success: function(json) {
+          console.log(json);
+
+          for (var i = 0; i < json.length; i++) {
+            var x = json[i];
+            console.log(x);
+            console.log(x['ogp']['og_image']);
+
+            $('#container').append('<img src=\"' + x['ogp']['og_image'] + '\"></img>');
+          }
+          draw();
+        }
+      });
+
+      function draw() {
+        // TODO
+      } //draw
+    });
+    </script>
+  <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="container">
+
+    </div>
+  </body>
+</html>
