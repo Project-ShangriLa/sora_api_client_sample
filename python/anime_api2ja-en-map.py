@@ -14,4 +14,7 @@ with urllib.request.urlopen(req) as res:
 
 with open('anime_list.csv', 'w', newline='') as f:
     writer = csv.writer(f)
+    header = ['ja title', 'english title']
+    writer.writerow(header)
     writer.writerows(master_list)
+f.close()
